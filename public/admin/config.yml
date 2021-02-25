@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-site_url: https://elnur.netlify.app
-display_url: https://elnur.netlify.app
+site_url: https://elnur1.netlify.app
+display_url: https://elnur1.netlify.app
 logo_url: ../contents/uploads/icon.png
 
 #publish_mode: editorial_workflow # this will and workflow: draft, in review, ready states
