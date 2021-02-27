@@ -1,7 +1,9 @@
 /*
 This script will walk through the folders inside "contents" folder (except "uploads" folder)
 to create "index.json" file in each folder. These json files will have an array of file names in those folders.
-This will happen during build time as this script will be injected into "npm run build" command.
+"Index.json" files won't be pushed to git, they will be dynamically generated during build and will be deployed from "/build" folder.
+
+This script will be run during build time as it will be injected into "npm run build" command.
 */
 
 const glob = require("glob");
