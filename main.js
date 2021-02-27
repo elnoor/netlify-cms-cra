@@ -1,5 +1,5 @@
 /*
-This script will walk through the folders inside "contents" folder (except "uploads" folder)
+This script will walk through the folders inside "contents" folder (except "_uploads" folder)
 to create "index.json" file in each folder. These json files will have an array of file names in those folders.
 "Index.json" files won't be pushed to git, they will be dynamically generated during build and will be deployed from "/build" folder.
 
@@ -12,8 +12,8 @@ function readDirectory(dir, callback) {
   glob(dir, { sort: true }, callback);
 }
 
-readDirectory("public/contents/!(uploads)", function (err, folders) {
-  // get list of content folders excluding "uploads" folder
+readDirectory("public/contents/!(_uploads)", function (err, folders) {
+  // get list of content folders excluding "_uploads" folder
   if (err) throw err;
 
   const fs = require("fs");
