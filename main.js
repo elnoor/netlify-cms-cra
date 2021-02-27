@@ -8,24 +8,32 @@ This script will be run during build time as it will be injected into "npm run b
 
 const glob = require("glob");
 
-function readDirectory(dir, callback) {
-  glob(dir, { sort: true }, callback);
+const contentsFolder = "public/contents/";
+
+function readDirectory(dir, pattern, callback) {
+  glob(pattern, { cwd: dir, sort: true }, callback);
 }
 
-readDirectory("public/contents/!(_uploads)", function (err, folders) {
+readDirectory(contentsFolder, "!(_uploads)", function (err, folders) {
   // get list of content folders excluding "_uploads" folder
   if (err) throw err;
+  console.log("FOLDERS:", folders);
 
   const fs = require("fs");
   folders.forEach((folder) => {
-    // get all json files inside every content folder
-    readDirectory(folder + "/*.json", function (er, files) {
+    // get all json files inside every content folder, excluding "index.json" in case they added during local development
+    readDirectory(contentsFolder + folder, "!(index).json", function (er, files) {
       if (er) throw er;
+      console.log(`FILES IN ${folder}:`, files);
 
       // create index.json file in each folder with array of file names in that folder
-      fs.writeFile(folder + "/index.json", JSON.stringify(files), function (e) {
-        if (e) throw e;
-      });
+      fs.writeFile(
+        contentsFolder + folder + "/index.json",
+        JSON.stringify(files),
+        function (e) {
+          if (e) throw e;
+        }
+      );
     });
   });
 });
