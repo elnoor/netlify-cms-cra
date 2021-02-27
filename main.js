@@ -1,25 +1,23 @@
 const glob = require("glob");
 
-const pathToContentFolders = "public/contents/!(uploads)"; // all folders in path excluding "uploads" folder
-
 function readDirectory(dir, callback) {
   glob(dir, { sort: true }, callback);
 }
 
-readDirectory(pathToContentFolders, function (err, folders) {
-  if (err) {
-    console.log("Error", err);
-  } else {
-    console.log(folders);
+readDirectory("public/contents/!(uploads)", function (err, folders) {
+  // get list of content folders excluding "uploads" folder
+  if (err) throw err;
 
-    folders.forEach((folder) => {
-      readDirectory(folder+"/", function (e, files) {
-        if (e) {
-          console.log("Error", e);
-        } else {
-          console.log(files);
-        }
+  const fs = require("fs");
+  folders.forEach((folder) => {
+    // get all json files inside every content folder
+    readDirectory(folder + "/*.json", function (er, files) {
+      if (er) throw er;
+
+      // create index.json file in each folder with array of file names in that folder
+      fs.writeFile(folder + "/index.json", JSON.stringify(files), function (e) {
+        if (e) throw e;
       });
     });
-  }
+  });
 });
