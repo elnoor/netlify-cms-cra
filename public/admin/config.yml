@@ -2,8 +2,8 @@ backend:
   name: git-gateway
   branch: master # Branch to update (optional; defaults to master)
 
-site_url: https://elnur1.netlify.app
-display_url: https://elnur1.netlify.app
+site_url: https://netlify-cms-cra.netlify.app
+display_url: https://netlify-cms-cra.netlify.app
 logo_url: ../contents/_uploads/icon.png
 
 #publish_mode: editorial_workflow # this will and workflow: draft, in review, ready states
@@ -33,6 +33,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     extension: "json"
     format: "json"
+    slug: "{{date}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields each document in this collection have
       - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'Answer', name: 'body', widget: 'markdown' }
