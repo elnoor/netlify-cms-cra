@@ -1,3 +1,9 @@
+/*
+This will be injected into "npm run build" command.
+Where all the folders inside "contents" folder (except "uploads" folder) will walked thorugh
+to create "index.json" file in each. These json files will have an array of file names in those folders.
+*/
+
 const glob = require("glob");
 
 function readDirectory(dir, callback) {
