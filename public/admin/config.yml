@@ -33,7 +33,7 @@ collections:
     create: true # Allow users to create new documents in this collection
     extension: "json"
     format: "json"
-    slug: "{{date}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields each document in this collection have
       - { label: 'Question', name: 'title', widget: 'string', tagname: 'h1' }
       - { label: 'Answer', name: 'body', widget: 'markdown' }
