@@ -4,7 +4,7 @@ backend:
 
 site_url: https://netlify-cms-cra.netlify.app
 display_url: https://netlify-cms-cra.netlify.app
-logo_url: https://netlify-cms-cra.netlify.app/contents/_uploads/icon.png # needs to be a URL to an image file
+logo_url: https://netlify-cms-cra.netlify.app/logo192.png # needs to be a URL to an image file
 
 #publish_mode: editorial_workflow # this will and workflow: draft, in review, ready states
 media_folder: "public/contents/_uploads" # Media files will be stored in the repo under public/contents/_uploads
