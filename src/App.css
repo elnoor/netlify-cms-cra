@@ -76,8 +76,26 @@ header nav ul li {
 .post {
   padding: 15px;
 }
-.post img{
-  max-height:30rem;
+.post .thumbnail {
+  max-height: 30rem;
   max-width: 100%;
   margin: 15px 0;
+}
+
+.post table,
+.post table td,
+.post table th {
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+code {
+  background: lightgrey;
+  padding: 0 5px;
+}
+
+pre {
+  background: lightgrey;
+  border-radius: 5px;
+  padding: 10px;
 }

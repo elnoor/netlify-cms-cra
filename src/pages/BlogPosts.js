@@ -78,11 +78,11 @@ function Post(props) {
   return (
     post && (
       <div className="post">
-        <a onClick={() => props.setCurrentPost(null)} href="##">
+        <button onClick={() => props.setCurrentPost(null)} href="##">
           BACK
-        </a>
+        </button>
         <h2>{post.title}</h2>
-        <img src={post.thumbnail} alt="thumbnail" />
+        <img src={post.thumbnail} alt="thumbnail" className="thumbnail" />
         <article
           dangerouslySetInnerHTML={{ __html: marked(post.body) }}
         ></article>
