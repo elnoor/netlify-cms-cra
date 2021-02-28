@@ -8,7 +8,7 @@ logo_url: https://netlify-cms-cra.netlify.app/contents/_uploads/icon.png # needs
 
 #publish_mode: editorial_workflow # this will and workflow: draft, in review, ready states
 media_folder: "public/contents/_uploads" # Media files will be stored in the repo under public/contents/_uploads
-public_folder: "/contents/uploads" # The src attribute for uploaded media will begin with /images/uploads in published site
+public_folder: "/contents/_uploads" # The src attribute for uploaded media will begin with /contents/_uploads in published site
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
