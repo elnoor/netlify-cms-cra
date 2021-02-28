@@ -88,6 +88,10 @@ header nav ul li {
   border-collapse: collapse;
   border: 1px solid black;
 }
+.post table td,
+.post table th {
+  padding: 2px 5px;
+}
 
 code {
   background: lightgrey;
