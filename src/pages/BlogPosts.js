@@ -37,12 +37,12 @@ function PostTile(props) {
   }, [props.fileName]);
 
   return (
-    <div className="post">
-      <img src={post.thumbnail} alt="thumbnail"/>
-      {/* <img src="contents/_uploads/2.png" alt="thumbnail" /> */}
-
-      <h3>{post.title}</h3>
-      <small>{new Date(post.date).toDateString()}</small>
+    <div className="post-tile">
+      <img src={post.thumbnail} alt="thumbnail" />
+      <div className="details">
+        <div className="title">{post.title}</div>
+        <div className="date">{new Date(post.date).toDateString()}</div>
+      </div>
     </div>
   );
 }

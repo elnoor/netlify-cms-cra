@@ -42,8 +42,33 @@ header nav ul li {
   display: flex;
 }
 
-.blog .posts .post {
+.blog .post-tile {
   width: 50%;
   display: inline-flex;
   border: 1px solid turquoise;
+}
+
+.blog .post-tile img {
+  width: 40%;
+}
+
+.blog .post-tile .details {
+  width: 60%;
+  padding: 15px;
+  border: 1px solid lime;
+}
+.blog .post-tile .details .title {
+  height: 80%;
+  max-height: 80%;
+  font-size: 2rem;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.blog .post-tile .details .date {
+  height: 20%;
+  max-height: 20%;
+  padding-top: 10px;
+  color: gray;
 }
