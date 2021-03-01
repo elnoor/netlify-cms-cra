@@ -1,12 +1,23 @@
-# Getting Started with Create React App
+# Netlify CMS with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Netlify CMS](https://www.netlifycms.org/). See official doc on [how to add](https://www.netlifycms.org/docs/add-to-your-site/) Netlify CMS to site and [configure it](https://www.netlifycms.org/docs/configuration-options/).
 
-## Available Scripts
+## Add Netlify CMS and Configure it
 
-In the project directory, you can run:
+First thing to know that `admin` folder should in public folder. Inside that folder create `congif.yml` and `index.html` files. Use yaml file to configure CMS, collections etc. And inside `admin/index.html` actually "import" CMS and login modal widget from CDN.
 
-### `npm start`
+Inside `public/index.html` file's `<head>` tag again inject Netlify CMS login modal widget (Netlify Identity Widget). Then in the same file make sure to initialize Netlify CMS before `</body>` tag.
+
+Now, created `public/contents` folder inside of which uploaded media files and collection files will be stored. Then make sure your `media_folder`, `public_folder` and your collections' folders are set according to your folders in `contents` folder.
+
+### Deploy files and Configure Netlify
+
+Commit changes and push. Later on, in [Netlify](https://netlify.com) create a new site from your git repo (e.g GitHub). Since the application is CRA application default build settings will work, `npm run build` as build command and `build/` folder as directory to deploy.
+
+Then enable Identity, set your registration (preferably to be invite-only). Most important, enable **git gateway** whcih will let Netlify CMS to push new changes (i.e new collection entry) to be saved (pushed) to git repo.
+
+Then from **Identity** menu on the top of the page invite new user and click on the link that is received via email to verify email.
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
