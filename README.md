@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Add Netlify CMS and Configure it
 
 First thing to know that `admin` folder should in public folder. Inside that folder create `congif.yml` and `index.html` files. Use yaml file to configure CMS, collections etc. And inside `admin/index.html` actually "import" CMS and login modal widget from CDN.
+![image](https://user-images.githubusercontent.com/10808241/109473304-5d768780-7a30-11eb-95c9-bb0bbb51ac3b.png)
 
 Inside `public/index.html` file's `<head>` tag again inject Netlify CMS login modal widget (Netlify Identity Widget). Then in the same file make sure to initialize Netlify CMS before `</body>` tag.
 
@@ -17,6 +18,7 @@ Commit changes and push. Later on, in [Netlify](https://netlify.com) create a ne
 Then enable Identity, set your registration (preferably to be invite-only). Most important, enable **git gateway** whcih will let Netlify CMS to push new changes (i.e new collection entry) to be saved (pushed) to git repo.
 
 Then from **Identity** menu on the top of the page invite new user and click on the link that is received via email to verify email.
+![image](https://user-images.githubusercontent.com/10808241/109473432-8434be00-7a30-11eb-8dba-9d70b0860419.png)
 
 Now you can log in to CMS' admin  section by going to `url/admin` and start adding your content.
 
