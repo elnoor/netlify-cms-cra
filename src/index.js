@@ -3,9 +3,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import CMS from "netlify-cms-app";
-import {Post} from './pages/BlogPosts';
-
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,7 +15,3 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
-
-// CMS.registerPreviewStyle(styles, { raw: true });
-CMS.registerPreviewTemplate("contact", Post);
-CMS.init();
