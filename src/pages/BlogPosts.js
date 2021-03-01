@@ -63,7 +63,7 @@ function PostTile(props) {
   );
 }
 
-function Post(props) {
+export function Post(props) {
   const { post } = props;
   return (
     post && (
