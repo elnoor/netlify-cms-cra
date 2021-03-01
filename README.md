@@ -1,4 +1,4 @@
-# Netlify CMS with Create React App
+# Netlify CMS with Create React App - [DEMO](https://netlify-cms-cra.netlify.app/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and [Netlify CMS](https://www.netlifycms.org/). See official doc on [how to add](https://www.netlifycms.org/docs/add-to-your-site/) Netlify CMS to site and [configure it](https://www.netlifycms.org/docs/configuration-options/).
 
