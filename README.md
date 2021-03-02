@@ -29,3 +29,17 @@ Now that you have created entries from CMS, you need to use them in your React a
 First thing is to know the list of filenames that is created by CMS, to create that list we will add `main.js` to the root of the project. Whenever this file will be run, it will find folders inside `contents` folder (except `_uploads`) and inside them will create an `index.json` file which will list the names of the files there. Later on by calling this `index.json` file you can check what files are in that folder.
 
 `main.js` is a file to be run in Node/server. So we will need to run this file whenever we will build the project. To achieve that we will change the build script in `package.json` to be `"build": "node main.js && react-scripts build",`
+
+
+### Notes
+If you get an error message like "Although you appear to have the correct authorization credentials, the..." when logging in:
+
+
+<img src="https://user-images.githubusercontent.com/10808241/109627104-81080380-7afe-11eb-92f1-0fad2eb0abf9.png" width=300/>
+
+
+You may need to check Third-party application access policy in your (organization's) git account. For example in GitHub removing the third party restriction would work:
+
+<img src="https://user-images.githubusercontent.com/10808241/109627582-01c6ff80-7aff-11eb-9cee-8d80561f0fee.png" width=500/>
+
+
