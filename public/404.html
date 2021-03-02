@@ -2,10 +2,18 @@
 <html lang="en">
   <head>
     <title>404</title>
+    <script>
+      (function () {
+        window.location.href = "/404";
+      })();
+    </script>
   </head>
   <body>
-    <h2>404</h2>
-    <p>This is a custom 404 page to be picked up by Netlify</p>
-    <a href="index.html">Back to Home Page</a>
+    <noscript>
+      <p>
+        You hit a page that doesn't exist. Only way now is to go back
+        <a href="index.html">HOME</a>
+      </p>
+    </noscript>
   </body>
 </html>
